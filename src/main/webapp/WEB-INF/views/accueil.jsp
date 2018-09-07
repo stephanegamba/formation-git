@@ -15,7 +15,6 @@
 	<header id="header">
 		<img alt="Cocktails" src="${pageContext.request.contextPath}/static/cocktails.png" />
 		<h1>Spring bar</h1>
-		<c:out value="${date}" />
 	</header>
 	<section id="content">
 		<p>
@@ -26,5 +25,8 @@
 			<li><a href="<c:url value="commande" />">Passer une commande</a></li>
 		</ul>
 	</section>
+	<footer>
+		<i><small><c:out value="${date}" /></small></i>
+	</footer>
 </body>
 </html>
