@@ -6,9 +6,9 @@ import java.util.Locale;
 
 public class Dates {
 
-	private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE d MMMM yyyy", Locale.FRENCH);
+  private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE d MMMM yyyy", Locale.FRENCH);
 
-	public static String today() {
-		return formatter.format(LocalDate.now());
-	}
+  public static String today() {
+    return formatter.format(LocalDate.now());
+  }
 }

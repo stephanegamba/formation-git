@@ -13,23 +13,23 @@ import fr.insee.bar.date.Dates;
 @Controller
 public class AccueilController {
 
-	@Value("${application.name}")
-	private String name;
+  @Value("${application.name}")
+  private String name;
 
-	@ModelAttribute("date")
-	public String date() {
-		return Dates.today();
-	}
+  @ModelAttribute("date")
+  public String date() {
+    return Dates.today();
+  }
 
-	@GetMapping("/")
-	@ResponseStatus(HttpStatus.MOVED_PERMANENTLY)
-	public String welcome() {
-		return "redirect:/accueil";
-	}
+  @GetMapping("/")
+  @ResponseStatus(HttpStatus.MOVED_PERMANENTLY)
+  public String welcome() {
+    return "redirect:/accueil";
+  }
 
-	@GetMapping("/accueil")
-	public String hello(Model model) {
-		model.addAttribute("message");
-		return "accueil";
-	}
+  @GetMapping("/accueil")
+  public String hello(Model model) {
+    model.addAttribute("message");
+    return "accueil";
+  }
 }
