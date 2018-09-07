@@ -15,6 +15,7 @@
 	<header id="header">
 		<img alt="Cocktails" src="${pageContext.request.contextPath}/static/cocktails.png" />
 		<h1>Spring bar</h1>
+		<c:out value="${date}" />
 	</header>
 	<section id="content">
 		<p>
