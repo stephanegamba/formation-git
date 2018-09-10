@@ -21,7 +21,11 @@ public class AccueilController {
 
 	@GetMapping("/accueil")
 	public String hello(Model model) {
-		model.addAttribute("message");
+		model.addAttribute("message", this.message());
 		return "accueil";
+	}
+
+	private String message() {
+		return name;
 	}
 }
