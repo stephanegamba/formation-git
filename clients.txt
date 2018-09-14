@@ -1,4 +1,4 @@
-2;Wanda Gray;wanda.gray@ebay.co.uk;26/07/1988
+2;Wanda Gray;wanda.gray@ebay.uk;26/07/1988
 2;Lisa Mcdonald;lisa.mcdonald@de.vu;04/06/1952
 2;Barbara Kim;barbarra.kim@deviantart.com;31/07/1958
 1;Kevin Sims;kevin.sims@usatoday.com;03/06/1986
