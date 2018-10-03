@@ -2,6 +2,8 @@ package fr.insee.bar.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.Comparator;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,13 +43,17 @@ public class CocktailRepositoryTest {
 
 	@Test
 	public void whenSearchRUS_returnMatches() {
-		assertThat(cocktailRepository.findAll(CocktailSpec.search("RUS"))).allMatch(c -> c.getNom().toUpperCase().contains("RUS"));
+		assertThat(cocktailRepository.findAll(CocktailSpec.search("RUS")))
+			.allMatch(c -> c.getNom().toUpperCase().contains("RUS"));
 	}
 
 	@Test
 	public void whenSearchByExample_returnFullCopy() {
 		Cocktail example = new Cocktail();
 		example.setId((short) 150);
-		assertThat(cocktailRepository.findByExample(example)).hasFieldOrPropertyWithValue("prix", 8.0);
+		assertThat(cocktailRepository.findByExample(example))
+			.hasFieldOrPropertyWithValue("prix", 8.0);
+	}
+
 	}
 }
