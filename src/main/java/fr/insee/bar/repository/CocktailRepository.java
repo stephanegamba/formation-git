@@ -1,5 +1,7 @@
 package fr.insee.bar.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
@@ -11,4 +13,6 @@ public interface CocktailRepository extends JpaRepository<Cocktail, Short>, JpaS
 
 	@Query("select c from Cocktail c where c.id = :#{#cocktail.id}")
 	public Cocktail findByExample(@Param("cocktail") Cocktail cocktail);
+
+	public List<Cocktail> findByPrixLessThanOrderByPrix(double prix);
 }
