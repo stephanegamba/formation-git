@@ -9,6 +9,6 @@ public abstract class CocktailSpec {
 
 	public static Specification<Cocktail> search(String search) {
 		String q = "%" + Search.normalize(search) + "%";
-		return (cocktail, query, builder) -> builder.like(cocktail.get("nomNorm"), q);
+		return (entity, query, builder) -> builder.like(entity.get("nomNorm"), q);
 	}
 }
