@@ -55,5 +55,10 @@ public class CocktailRepositoryTest {
 			.hasFieldOrPropertyWithValue("prix", 8.0);
 	}
 
+	@Test
+	public void whenSearchByPrix_returnSublist() {
+		assertThat(cocktailRepository.findByPrixLessThanOrderByPrix(10))
+			.hasSize(35)
+			.isSortedAccordingTo(Comparator.comparing(Cocktail::getPrix));
 	}
 }
