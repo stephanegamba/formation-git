@@ -12,7 +12,7 @@ import com.lowagie.text.Document;
 import com.lowagie.text.Paragraph;
 import com.lowagie.text.pdf.PdfWriter;
 
-import fr.insee.bar.model.Client;
+import fr.insee.bar.beans.Client;
 
 public class ClientsPdfView extends AbstractPdfView{
 

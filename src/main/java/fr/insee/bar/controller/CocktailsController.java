@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import fr.insee.bar.exception.BarCommandeException;
-import fr.insee.bar.model.Cocktail;
+import fr.insee.bar.beans.Cocktail;
 import fr.insee.bar.repository.CocktailRepository;
 import fr.insee.bar.repository.CocktailSpec;
 import fr.insee.bar.service.CocktailService;

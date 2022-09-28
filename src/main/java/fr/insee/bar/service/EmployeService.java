@@ -5,8 +5,8 @@ import org.springframework.stereotype.Service;
 import com.google.common.base.Objects;
 
 import fr.insee.bar.exception.BarDroitException;
-import fr.insee.bar.model.Employe;
-import fr.insee.bar.model.Role;
+import fr.insee.bar.beans.Employe;
+import fr.insee.bar.beans.Role;
 
 @Service
 public class EmployeService {
